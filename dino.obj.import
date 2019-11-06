@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/dino.obj-903b60f490bb752e8077828394fe090e.mesh"
+
+[deps]
+
+files=[ "res://.import/dino.obj-903b60f490bb752e8077828394fe090e.mesh" ]
+
+source_file="res://dino.obj"
+dest_files=[ "res://.import/dino.obj-903b60f490bb752e8077828394fe090e.mesh", "res://.import/dino.obj-903b60f490bb752e8077828394fe090e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

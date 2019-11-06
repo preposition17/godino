@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+flags_albedo_tex_force_srgb = true
+albedo_color = Color( 0.219608, 0.568627, 0, 1 )
+
+[sub_resource type="GDScript" id=5]
+script/source = "extends Camera
+
+func _process(delta):
+	look_at_from_position(Vector3(50, 5, $'../Dino'.translation.z), $'../Dino'.translation, Vector3(0, 1, 0))"
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends MeshInstance
+const SPEED = 10
+
+func _process(delta):
+	var dir = Vector3()
+	
+	if Input.is_action_just_pressed(\"ui_left\"):
+		dir.z =  1
+	if Input.is_action_just_pressed(\"ui_right\"):
+		dir.z = -1
+	if Input.is_action_just_pressed(\"ui_up\"):
+		dir.y = 1
+		dir.y = 0
+		
+	if dir:
+		translate(dir)"
+
+[sub_resource type="CapsuleMesh" id=6]
+
+[sub_resource type="GDScript" id=7]
+script/source = "extends MeshInstance
+
+func _process(delta):
+	var z = randit(-25, 25)
+	print(z)"
+
+[node name="root" type="Spatial"]
+
+[node name="Ground" type="MeshInstance" parent="."]
+transform = Transform( 50, 0, 0, 0, 1, 0, 0, 0, 20, 0, -1, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.00194676, -0.355785, 0.934566, -0.000300512, 0.934567, 0.355786, -0.0499999, -4.86739e-05, 8.56229e-05, 50, 5, 0 )
+script = SubResource( 5 )
+
+[node name="Dino" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 40, 2, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+script = SubResource( 4 )
+
+[node name="Enemy" type="MeshInstance" parent="."]
+transform = Transform( -0.0124058, -0.00694232, 0.999899, -0.999923, 8.61319e-05, -0.0124055, 0, -0.999976, -0.00694286, -50, 2, 0 )
+mesh = SubResource( 6 )
+material/0 = null
+script = SubResource( 7 )
