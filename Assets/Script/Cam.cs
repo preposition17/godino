@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class Cam : MonoBehaviour
 {
-    private Vector3 dir;
+    private Vector3 position;
     void Start()
     {
-        dir = Vector3.zero;
-        dir.x = 1.0f*Mathf.Cos(transform.eulerAngles.y*3.14159265359f/180)*Mathf.Sin(transform.eulerAngles.x*3.14159265359f/180);
-        dir.y = 1.0f*Mathf.Sin(transform.eulerAngles.x*3.14159265359f/180)*Mathf.Sin(transform.eulerAngles.y*3.14159265359f/180);
-        dir.z = 1.0f*Mathf.Cos(transform.eulerAngles.x*3.14159265359f/180);
+        // Assign zero value to position
+        position = Vector3.zero;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(dir*Time.deltaTime);
-        Debug.Log("x - " +dir.x.ToString());
-        Debug.Log("y - " +dir.y.ToString());
-        Debug.Log("z - " +dir.z.ToString());
-        Debug.Log("cos of angle - " + Mathf.Cos(transform.eulerAngles.y*3.14159265359f/180).ToString());
+        // Freeze camera, cause it shouldn't jump togetger with dino
+        // transform.position = Vector3.Lerp(transform.position, position, 1f*Time.deltaTime);
     }
 }
