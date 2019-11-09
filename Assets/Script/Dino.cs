@@ -5,7 +5,7 @@ using UnityEngine.iOS;
 
 public class Dino : MonoBehaviour
 {
-    private float speed = 1f;
+    public float speed = 1f;
     public float jumpPower = 10.0f;
     private float gravityF;
     public Rigidbody rb;
