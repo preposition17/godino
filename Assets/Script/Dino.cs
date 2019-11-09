@@ -5,8 +5,12 @@ using UnityEngine.iOS;
 
 public class Dino : MonoBehaviour
 {
+<<<<<<< HEAD
+    public float speed = 1f;
+=======
     private float z_coordinate = 0;
     private float speed = 1f;
+>>>>>>> 10644211722d7c99bdc6f8875a32ecd9d96afed1
     public float jumpPower = 10.0f;
     private float gravityF;
     public Rigidbody rb;
