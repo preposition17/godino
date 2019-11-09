@@ -22,11 +22,14 @@ public class Dino : MonoBehaviour
 
     private void DinoMoveForward(){
         transform.Translate(direction*Time.deltaTime);
+        if(rb.velocity.y < 0){
+            rb.AddForce(Vector3.down * 10 * rb.mass);
+        }
     }
 
     public void DinoGravity(){
         if(Input.GetButtonDown("Jump") && transform.position.y <= 0.5){
-            rb.AddForce(new Vector3(0,10,0), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0,5,0), ForceMode.Impulse);
         }
     }
 }
