@@ -19,6 +19,8 @@ public class Dino : MonoBehaviour
     private void Update(){
         DinoMoveForward();
         DinoJump();
+        // Aligns dino on the center of the road
+        AlignDino();
         // Sometimes dino fails underground, i hope it helps, but not sure
         if(transform.position.y < 0.49f){
             transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
@@ -46,6 +48,11 @@ public class Dino : MonoBehaviour
                 // Jump to the right
                 rb.AddForce(new Vector3(0,5,-1), ForceMode.Impulse);
             }
+        }
+    }
+    private void AlignDino(){
+        if(transform.position.y <= 0.6){
+            transform.position = new Vector3(transform.position.x, Mathf.Round(transform.position.y), transform.position.z);
         }
     }
 }
