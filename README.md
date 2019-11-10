@@ -2,7 +2,10 @@
 
 ## Description
 
-Mobile game for IOS and Android
+Mobile game for IOS and Android.
+
+## The idea
+
 Main purpose is safe Dino's life from catastrophe
 
 # Contributors
