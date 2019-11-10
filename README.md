@@ -1,9 +1,8 @@
 # Go Dino
 
-Addons Forge
-
 ## Description
 
+Mobile game for IOS and Android
 Main purpose is safe Dino's life from catastrophe
 
 # Contributors
