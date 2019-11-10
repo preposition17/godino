@@ -1,20 +1,18 @@
-=================
- Go Dino
-=================
+# Go Dino
 
-Debugging
-=========
+## Description
+
+Mobile game for IOS and Android.
+
+## The idea
 
 Main purpose is safe Dino's life from catastrophe
 
-Credits
-=======
+# Contributors
 
-Contributors
-------------
 * `Aidar Ayupov <https://github.com/preposition17>`__
 * `Vildan Safin <https://github.com/Enigma228322>`__
 
-Sponsors
---------
+# Sponsors
+
 * `VA Games <in developing>`__
