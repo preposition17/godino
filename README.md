@@ -1,11 +1,18 @@
-==============
- GoDino mobile game
+# Go Dino
 
-Description
---------
-The main purpose is to save dino's life and evade different dangerous things when dino is running.
+## Description
 
-Sponsors
---------
-* `VA Games LLC <https://github.com/preposition17>`__
-* `VA Games LLC <https://github.com/Enigma228322>`__
+Mobile game for IOS and Android.
+
+## The idea
+
+Main purpose is safe Dino's life from catastrophe
+
+# Contributors
+
+* `Aidar Ayupov <https://github.com/preposition17>`__
+* `Vildan Safin <https://github.com/Enigma228322>`__
+
+# Sponsors
+
+* `VA Games <in developing>`__
