@@ -1,20 +1,16 @@
-=================
- Go Dino
-=================
+# Go Dino
 
-Debugging
-=========
+Addons Forge
+
+## Description
 
 Main purpose is safe Dino's life from catastrophe
 
-Credits
-=======
+# Contributors
 
-Contributors
-------------
 * `Aidar Ayupov <https://github.com/preposition17>`__
 * `Vildan Safin <https://github.com/Enigma228322>`__
 
-Sponsors
---------
+# Sponsors
+
 * `VA Games <in developing>`__
